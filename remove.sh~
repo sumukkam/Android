@@ -1,3 +1,0 @@
-for d in */ ; do
-	rm -R .git
-done
