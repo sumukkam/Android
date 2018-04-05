@@ -1,0 +1,87 @@
+Box 2d World
+    Bodies
+        mass
+        velocity
+        location
+        angles
+        fixtures - physical attributes of bodies
+            shape
+            density
+            friction
+            restitution - (bounciness)
+
+
+
+
+
+        /* creating the ground bodies/fixtures */
+        /* ground is 2 from the bottom in tile editor ( hence .get(2) ) */
+        for(MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            /*
+             * Dynamic body - a player that is affected by forces, gravity, can move around on screen
+             * Static body - dont really move. not affect by forces
+             * Kinematic bodies - not affect by forces, but can be manipulated by velocities (pendulums, moving platforms)
+             */
+            bDef.type = BodyDef.BodyType.StaticBody;
+            bDef.position.set(rect.getX()+rect.getWidth()/2, rect.getX()+rect.getHeight()/2);
+
+            //adding body to our world
+            body = world.createBody(bDef);
+
+            shape.setAsBox(rect.getWidth()/2, rect.getHeight()/2);
+            fDef.shape = shape;
+            body.createFixture(fDef);
+        }
+
+
+        /* creating the pipe bodies/fixtures */
+        /* pipe is 3 from the bottom in tile editor ( hence .get(3) ) */
+        for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bDef.type = BodyDef.BodyType.StaticBody;
+            bDef.position.set(rect.getX()+rect.getWidth()/2, rect.getX()+rect.getHeight()/2);
+
+            //adding body to our world
+            body = world.createBody(bDef);
+
+            shape.setAsBox(rect.getWidth()/2, rect.getHeight()/2);
+            fDef.shape = shape;
+            body.createFixture(fDef);
+        }
+
+
+        /* creating the coins bodies/fixtures */
+        /* coins is 4 from the bottom in tile editor ( hence .get(4) ) */
+        for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bDef.type = BodyDef.BodyType.StaticBody;
+            bDef.position.set(rect.getX()+rect.getWidth()/2, rect.getX()+rect.getHeight()/2);
+
+            //adding body to our world
+            body = world.createBody(bDef);
+
+            shape.setAsBox(rect.getWidth()/2, rect.getHeight()/2);
+            fDef.shape = shape;
+            body.createFixture(fDef);
+        }
+
+
+        /* creating the bricks bodies/fixtures */
+        /* bricks is 5 from the bottom in tile editor ( hence .get(5) ) */
+        for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bDef.type = BodyDef.BodyType.StaticBody;
+            bDef.position.set(rect.getX()+rect.getWidth()/2, rect.getX()+rect.getHeight()/2);
+
+            //adding body to our world
+            body = world.createBody(bDef);
+
+            shape.setAsBox(rect.getWidth()/2, rect.getHeight()/2);
+            fDef.shape = shape;
+            body.createFixture(fDef);
+        }

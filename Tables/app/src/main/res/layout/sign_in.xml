@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_on_gradient"
+    android:paddingTop="70dp"
+    android:paddingBottom="70dp"
+    android:paddingLeft="48dp"
+    android:paddingRight="48dp"
+    tools:context="com.msushanth.tables.SignIn">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            app:srcCompat="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tables"
+            android:textSize="80sp"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"/>
+
+        <EditText
+            style="@style/sign_on_edit_text_style"
+            android:id="@+id/usernameEditText"
+            android:hint="Username"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            style="@style/sign_on_edit_text_style"
+            android:id="@+id/passwordEditText"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            style="@style/sign_on_button_style"
+            android:id="@+id/signInButton"
+            android:text="Sign In"
+            android:onClick="signInButtonClicked"/>
+
+        <TextView
+            android:id="@+id/createAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createAccount"
+            android:text="Don't have an account? Sign Up"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

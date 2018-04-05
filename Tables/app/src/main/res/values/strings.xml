@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tables</string>
+    <string name="title_activity_create_account">CreateAccount</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

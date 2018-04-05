@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Track Distance</string>
+    <string name="title_activity_maps">Map</string>
+    <string-array name="leftDrawerOptions">
+        <item>Track my Distance</item>
+        <item>Draw to find Distance</item>
+        <item>Options</item>
+        <item>Options</item>
+        <item>Options</item>
+        <item>Options</item>
+        <item>Reset/Clear</item>
+    </string-array>
+</resources>

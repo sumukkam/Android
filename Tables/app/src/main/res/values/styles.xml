@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary500</item>
+        <item name="colorPrimaryDark">@color/colorPrimary800</item>
+        <item name="colorAccent">@color/colorPrimaryA300</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- EditText layout for the edittexts sign on / create account screens -->
+    <style name="sign_on_edit_text_style">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/hintTextColor</item>
+    </style>
+
+    <!-- Button layout for the buttons on the sign on / create account screens -->
+    <style name="sign_on_button_style">
+        <item name="android:background">@drawable/sign_on_button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>
